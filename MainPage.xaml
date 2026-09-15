@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+
+            <Label Text="Loan Calculator"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Grid ColumnDefinitions="150,*"
+                  RowDefinitions="Auto,Auto,Auto"
+                  RowSpacing="15"
+                  ColumnSpacing="10">
+
+                <Label Grid.Row="0" Grid.Column="0"
+                       Text="Loan Amount"
+                       VerticalOptions="Center" />
+                <Entry Grid.Row="0" Grid.Column="1"
+                       x:Name="LoanAmountEntry"
+                       Placeholder="Enter loan amount"
+                       Keyboard="Numeric" />
+
+                <Label Grid.Row="1" Grid.Column="0"
+                       Text="Interest Rate (%)"
+                       VerticalOptions="Center" />
+                <Entry Grid.Row="1" Grid.Column="1"
+                       x:Name="InterestRateEntry"
+                       Placeholder="Enter interest rate"
+                       Keyboard="Numeric" />
+
+                <Label Grid.Row="2" Grid.Column="0"
+                       Text="Loan Term (Years)"
+                       VerticalOptions="Center" />
+                <Entry Grid.Row="2" Grid.Column="1"
+                       x:Name="LoanTermEntry"
+                       Placeholder="Enter loan term"
+                       Keyboard="Numeric" />
+
+            </Grid>
+
+            <Button Text="Calculate"
+                    Clicked="OnCalculateClicked"
+                    BackgroundColor="#6A5ACD"
+                    TextColor="White"
+                    CornerRadius="8"
+                    HeightRequest="50" />
+
+            <Grid ColumnDefinitions="150,*"
+                  RowDefinitions="Auto,Auto,Auto"
+                  RowSpacing="15"
+                  ColumnSpacing="10">
+
+                <Label Grid.Row="0" Grid.Column="0" Text="Monthly Payment" />
+                <Label Grid.Row="0" Grid.Column="1" x:Name="MonthlyPaymentLabel" Text="$0.00" />
+
+                <Label Grid.Row="1" Grid.Column="0" Text="Total Interest" />
+                <Label Grid.Row="1" Grid.Column="1" x:Name="TotalInterestLabel" Text="$0.00" />
+
+                <Label Grid.Row="2" Grid.Column="0" Text="Total Payment" />
+                <Label Grid.Row="2" Grid.Column="1" x:Name="TotalPaymentLabel" Text="$0.00" />
+
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

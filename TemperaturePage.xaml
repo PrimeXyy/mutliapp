@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.TemperaturePage"
+             Title="Temp Converter">
+    <VerticalStackLayout Padding="30" Spacing="20">
+
+        <Label Text="Temperature Converter"
+               FontSize="28" FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <Entry x:Name="TempEntry"
+               Placeholder="Enter a temperature"
+               Keyboard="Numeric" />
+
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+            <Button Text="°F → °C" Clicked="OnFtoC" BackgroundColor="#6A5ACD" TextColor="White" />
+            <Button Text="°C → °F" Clicked="OnCtoF" BackgroundColor="#6A5ACD" TextColor="White" />
+        </HorizontalStackLayout>
+
+        <Label x:Name="ResultLabel"
+               Text="Result: --"
+               FontSize="22"
+               HorizontalOptions="Center" />
+
+    </VerticalStackLayout>
+</ContentPage>

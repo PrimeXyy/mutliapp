@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.QuotePage">
+
+    <VerticalStackLayout Spacing="25" Padding="30" VerticalOptions="Center">
+
+        <Label Text="Phone Number Horoscope" 
+               FontSize="24" 
+               HorizontalOptions="Center" />
+
+        <Entry x:Name="NumberEntry" 
+               Placeholder="Enter your phone number (e.g., 089298900)" 
+               Keyboard="Numeric" />
+
+        <Button Text="Read My Horoscope" 
+                Clicked="OnGetQuote" />
+
+        <Label x:Name="QuoteLabel" 
+               FontSize="18" 
+               HorizontalOptions="Center" 
+               HorizontalTextAlignment="Center" />
+
+    </VerticalStackLayout>
+</ContentPage>
